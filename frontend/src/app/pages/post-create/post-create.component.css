@@ -1,0 +1,28 @@
+.center{
+    margin: 10px auto;
+    text-align: center;
+}
+.mat-card{
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.mat-form-field{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+}
+
+button{
+    margin: auto;
+}
+
+.Post_class{
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}

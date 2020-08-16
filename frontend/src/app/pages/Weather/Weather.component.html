@@ -1,0 +1,104 @@
+<mat-card *ngIf="weather!=null" class="Post_class">
+    <div 
+        [className]="((weather.main.temp-273.15) <= 28) ? 'cold-temperature content' : 'hot-temperature content' "  
+    >
+        <div *ngIf="weather.weather[0].main=='Clouds'" class="icon clouds">
+            <img src="https://cdn0.iconfinder.com/data/icons/weaher-forecast/128/weatherForecast-27-512.png" width="100" height="100">
+        </div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Snow'" class="icon snowflakes"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Drizzle'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Rain'" class="icon raindrop"></div>
+        <div *ngIf="weather.weather[0].main=='Sunny'" class="icon">
+            <img src="https://icons.iconarchive.com/icons/icons-land/weather/256/Sunny-icon.png" width="100" height="100">
+        </div>
+        <div *ngIf="weather.weather[0].main=='Haze'" class="icon haze">
+            <img src="https://cdn1.iconfinder.com/data/icons/weather-18/512/fog_mist-512.png" width="100" height="100">
+        </div>
+        <div *ngIf="weather.weather[0].main=='Mist'" class="icon">
+            <img src="https://cdn0.iconfinder.com/data/icons/large-weather-icons/512/Mist.png" width="100" height="100">
+        </div>
+
+        <mat-card-title>
+            {{ weather.weather[0].main }} {{ (weather.main.temp - 273) | number }}°C
+        </mat-card-title>
+        <mat-card-content>
+            {{ weather.weather[0].description }}<br>
+            {{ currentLocation }}
+            <span (click)="toggleLocationOption()" class="change-location">(change)</span>
+            <div [hidden]="showChangeLocation">
+                <mat-form-field>
+                    <input 
+                        matInput
+                        name="Location" 
+                        placeholder="Search Location" 
+                        autocomplete="off"
+                        #locationinput
+                        required
+                    />
+                </mat-form-field>
+                <button 
+                    mat-raised-button
+                    color="primary"
+                    (click)="changeLocation(locationinput)"
+                >
+                    Change
+                </button>
+            </div>            
+        </mat-card-content>
+        Range: {{ weather.main.temp_min - 273 | number }}°C - {{ weather.main.temp_max - 273 | number }}°C
+    </div>
+</mat-card>
+<p *ngIf="weather==null" class="center">Loading!</p>

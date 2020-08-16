@@ -1,0 +1,29 @@
+<h2 class="center">All Posts!</h2>
+
+<div class="Post_class">
+    <mat-accordion multi="true" *ngIf="posts.length > 0">
+        <mat-expansion-panel *ngFor="let Post of posts">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ Post.title }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-panel-description>
+                <div>
+                    {{ Post.description }}
+                </div>
+                <br />
+                <div>
+                    <button 
+                        mat-raised-button
+                        color="warn"
+                        (click)="deletePost(Post)"
+                    >
+                        Delete
+                    </button>
+                </div>
+            </mat-panel-description>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <p *ngIf="posts.length <= 0" class="center">There are no posts yet!</p>
+</div>

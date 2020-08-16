@@ -1,0 +1,37 @@
+<h2 class="center">Create a Post</h2>
+
+<mat-card color="primary">
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm" >
+        <mat-form-field>
+            <input 
+                matInput
+                name="title" 
+                placeholder="Title" 
+                ngModel
+                required
+                autocomplete="off"
+                #title="ngModel"
+            >
+            <mat-error *ngIf="title.invalid">Please enter a Post Title!</mat-error>
+        </mat-form-field><br />
+        <mat-form-field>
+            <input 
+                matInput
+                name="description" 
+                placeholder="Description" 
+                autocomplete="off"
+                ngModel
+                required
+                #description="ngModel"
+            >
+            <mat-error *ngIf="description.invalid">Please enter a description for the post!</mat-error>
+        </mat-form-field>
+        <button 
+            type="submit"
+            mat-raised-button
+            color="primary"
+        >
+            Create
+        </button>
+    </form>
+</mat-card>

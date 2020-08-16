@@ -1,0 +1,14 @@
+.Post_class{
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.center{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description{
+    display: block;
+}
