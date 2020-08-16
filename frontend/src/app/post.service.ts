@@ -16,33 +16,32 @@ export class PostService {
   getPosts(){
     this.webService.get('posts')
       .subscribe((post: Post[]) => {
-        this.Posts = post;
-        console.log(this.Posts);
-        this.postsUpdated.next([...this.Posts]);
+        this.Posts = post; //Get and Add all posts
+        this.postsUpdated.next([...this.Posts]); //Update to Subscription!
     });
   }
   
   getPostsUpdateListener(){
-    return this.postsUpdated.asObservable();
+    return this.postsUpdated.asObservable(); //Observable
   }
 
   getPost(postId: string){
-    return this.webService.get(`posts/${postId}`);
+    return this.webService.get(`posts/${postId}`); //Not Used
   }
 
   createPost(title: string, description: string){
     this.webService.post('posts', { title, description }).subscribe(
       (post:Post) => {
-        this.Posts.push(post);
-        this.postsUpdated.next([...this.Posts]);
+        this.Posts.push(post); //Post response on creating a post!
+        this.postsUpdated.next([...this.Posts]); //Update to Subscription on Adding new Post!
     });
   }
 
   deletePost(postId: string){
     var deleteUpdate = this.webService.delete(`posts/${postId}`);
     deleteUpdate.subscribe((post:Post) => {
-      this.Posts.splice(this.Posts.indexOf(post),1);
-      this.postsUpdated.next([...this.Posts]);
+      this.Posts.splice(this.Posts.indexOf(post),1); //Post response on creating a post!
+      this.postsUpdated.next([...this.Posts]); //Update to Subscription on Deleting a Post!
     })
   }
 

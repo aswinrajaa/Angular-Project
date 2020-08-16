@@ -9,12 +9,12 @@ export class WebService {
   readonly Weather_URL;
   
   constructor(private http: HttpClient) { 
-    this.ROOT_URL = "http://localhost:3000";
-    this.Weather_URL = "http://api.openweathermap.org/data/2.5";
+    this.ROOT_URL = "http://localhost:3000/api"; //Posts Backend API Link
+    this.Weather_URL = "http://api.openweathermap.org/data/2.5"; //Weather API Link
   }
 
   weather(location: string){
-    const defaultlocation = "Bangalore";
+    const defaultlocation = "Bangalore"; //Default Location
     if(location == ''){
       location = defaultlocation;
     }

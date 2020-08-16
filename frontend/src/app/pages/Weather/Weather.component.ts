@@ -13,7 +13,7 @@ export class WeatherComponent implements OnInit {
     
     weather = null;
 
-    currentLocation = 'Bangalore';
+    currentLocation = 'Bangalore';//Default Location
     temperatures = null;
     showChangeLocation = true;
 
@@ -21,20 +21,20 @@ export class WeatherComponent implements OnInit {
         private WebService: WebService
     ) { }
 
-    toggleLocationOption(){
+    toggleLocationOption(){ //For toggling input for location
       this.showChangeLocation = !this.showChangeLocation;
     }
 
     changeLocation(newLocation){
       if(newLocation.value != ''){
-        this.currentLocation = newLocation.value;
+        this.currentLocation = newLocation.value; //Change current location!
         newLocation.value = '';
-        this.ngOnInit();
-        this.showChangeLocation = !this.showChangeLocation;
+        this.ngOnInit(); //Get data with changed location!
+        this.showChangeLocation = !this.showChangeLocation; //Toggle back Location input!
       }
     }
 
-    ngOnInit(){
+    ngOnInit(){ //Get data from API
       this.WebService.weather(this.currentLocation)
           .subscribe(weather => {
               this.weather=weather;

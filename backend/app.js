@@ -4,9 +4,9 @@ const port = 3000;
 
 const mongoose = require('./database/mongoose');
 
-app.use(express.json());
+const route = require('./Routes/Routes');
 
-const Post = require('./database/models/post');
+app.use(express.json());
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -15,36 +15,16 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get('/posts', (req, res) => {
-    Post.find({})
-        .then(posts => res.send(posts))
-        .catch((error) => console.log(error));
-});
+//API Routes
+app.get('/api/posts', route);
 
-app.get('/posts/:postId', (req, res) => {
-    Post.find({ _id: req.params.postId })
-        .then(posts => res.send(posts))
-        .catch((error) => console.log(error));
-});
+app.get('/api/posts/:postId', route);
 
-app.patch('/posts/:postId', (req, res) => {
-    Post.findOneAndUpdate({ '_id': req.params.postId }, { $set: req.body})
-        .then(posts => res.send(posts))
-        .catch((error) => console.log(error));
-});
+app.patch('/api/posts/:postId', route);
 
-app.post('/posts', (req, res) => {
-    new Post ({ 'title': req.body.title, 'description': req.body.description})
-        .save()
-        .then((post) => res.send(post))
-        .catch((error) => console.log(error));
-});
+app.post('/api/posts', route);
 
-app.delete('/posts/:postId', (req, res) => {
-    Post.findByIdAndDelete({ '_id': req.params.postId }, { $set: req.body})
-        .then((post) => res.send(post))
-        .catch((error) => console.log(error));
-});
+app.delete('/api/posts/:postId', route);
 
 app.listen(port, () => {
     console.log("Server connected!\nPort: "+port);

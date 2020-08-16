@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//Post Schema - Model for Post!
 const postSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -8,9 +9,6 @@ const postSchema = new mongoose.Schema({
     description: {
         type: String,
         minlength: 5
-    },
-    image:{
-        type: String
     }
 });
 

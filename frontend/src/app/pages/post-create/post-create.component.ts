@@ -10,8 +10,6 @@ import { PostService } from 'src/app/post.service';
 })
 export class PostCreateComponent{
 
-    fileUploaded = null;
-
     constructor(
         private postService: PostService,
         private router: Router
@@ -19,10 +17,16 @@ export class PostCreateComponent{
     
 
     onAddPost(form:NgForm){
-        if(form.invalid){
+
+        if(form.invalid){ //Check if Form is valid!
             return;
         }
+
+        //Create a Post with Title and Description!
         this.postService.createPost(form.value.title, form.value.description);
+
+        //Reset form after data is collected!
         form.resetForm();
+
     }
 }

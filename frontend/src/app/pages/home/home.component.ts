@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent{
 
     constructor(){}
+
+    //This component is just for implementing all components in a page!
     
 }
