@@ -11,6 +11,7 @@ Frontend:
     -Components: Post-list, Post-Create, Weather, HomePage (Just for displaying all components in one page).
     -Model: Post Model - Title and Description.
     -Functions implemented: Create a Post with Title and Description, List them and Delete it.
+    -I have also used Angular Material UI for the frontend and done some modifications using CSS (Mostly for the weather - according to climate!).
 
 Backend:
     -Main file: app.js
