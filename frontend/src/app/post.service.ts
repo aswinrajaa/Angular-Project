@@ -40,7 +40,18 @@ export class PostService {
   deletePost(postId: string){
     var deleteUpdate = this.webService.delete(`posts/${postId}`);
     deleteUpdate.subscribe((post:Post) => {
-      this.Posts.splice(this.Posts.indexOf(post),1); //Post response on creating a post!
+      console.log(post);
+      console.log(this.Posts);
+      console.log(this.Posts.indexOf(post));
+      var count = 0, index = 0;
+      this.Posts.forEach(thispost => {
+        if(thispost._id == post._id){
+          index = count;
+          return false;
+        }
+        count++;
+      });
+      this.Posts.splice(index,1); //Post response on deleting a post!
       this.postsUpdated.next([...this.Posts]); //Update to Subscription on Deleting a Post!
     })
   }
