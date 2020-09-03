@@ -9,6 +9,7 @@ import { PostListComponent } from './pages/posts-list/posts-list.component';
 import { PostCreateComponent } from './pages/post-create/post-create.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -27,7 +28,8 @@ import { PostService } from './post.service';
     PostListComponent,
     PostCreateComponent,
     WeatherComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

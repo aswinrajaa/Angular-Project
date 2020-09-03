@@ -4,6 +4,7 @@ var routes = express.Router();
 const mongoose = require('../database/mongoose');
 
 const Post = require('../database/models/post');
+const { remove } = require('../database/models/post');
 
 //Get all Posts
 routes.get('/api/posts', (req, res) => {

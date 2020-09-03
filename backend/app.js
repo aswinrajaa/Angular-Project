@@ -26,6 +26,8 @@ app.post('/api/posts', route);
 
 app.delete('/api/posts/:postId', route);
 
+app.delete('/api/posts/delete', route);
+
 app.listen(port, () => {
     console.log("Server connected!\nPort: "+port);
 });

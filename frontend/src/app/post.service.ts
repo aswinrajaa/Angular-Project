@@ -40,9 +40,6 @@ export class PostService {
   deletePost(postId: string){
     var deleteUpdate = this.webService.delete(`posts/${postId}`);
     deleteUpdate.subscribe((post:Post) => {
-      console.log(post);
-      console.log(this.Posts);
-      console.log(this.Posts.indexOf(post));
       var count = 0, index = 0;
       this.Posts.forEach(thispost => {
         if(thispost._id == post._id){
