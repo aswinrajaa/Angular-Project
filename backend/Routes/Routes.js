@@ -5,6 +5,7 @@ const mongoose = require('../database/mongoose');
 
 const Post = require('../database/models/post');
 const { remove } = require('../database/models/post');
+const Login = require('../database/models/login');
 
 //Get all Posts
 routes.get('/api/posts', (req, res) => {
@@ -38,6 +39,12 @@ routes.get('api/posts/:postId', (req, res) => {
 //Edit specific Post: Not Implemented!
 routes.patch('/api/posts/:postId', (req, res) => {
     Post.findOneAndUpdate({ '_id': req.params.postId }, { $set: req.body})
+        .then(posts => res.send(posts))
+        .catch((error) => console.log(error));
+});
+
+routes.post('/api/login', (req, res) => {
+    Login.find({ 'username': body.req.username }, { 'password': body.req.password })
         .then(posts => res.send(posts))
         .catch((error) => console.log(error));
 });

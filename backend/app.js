@@ -28,6 +28,8 @@ app.delete('/api/posts/:postId', route);
 
 app.delete('/api/posts/delete', route);
 
+app.post('/api/login',route);
+
 app.listen(port, () => {
     console.log("Server connected!\nPort: "+port);
 });
